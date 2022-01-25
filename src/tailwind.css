@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* section {
+    outline: red 2px solid;
+  } */
+}
+
+@layer utilities {
+  .active {
+    @apply border-red-500;
+  }
+}
