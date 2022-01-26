@@ -12,6 +12,7 @@ function ready(fn) {
 ready(function () {
   const links = document.querySelectorAll("[data-link]");
   const sections = document.querySelectorAll("section");
+  const header = document.querySelector("#header");
 
   // ======================================================================
   // ============================ NAVBAR START ============================
@@ -26,6 +27,8 @@ ready(function () {
             .forEach((activeLink) => {
               activeLink.classList.add("active");
             });
+
+          header.classList.toggle("bg-white", entry.target.id !== "home");
         }
       });
     },
