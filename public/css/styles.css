@@ -423,10 +423,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: none;
 }
 
-section {
-  outline: 1px solid red;
-}
-
 *, ::before, ::after {
   --tw-translate-x: 0;
   --tw-translate-y: 0;
@@ -548,8 +544,19 @@ section {
   color: rgb(17 24 39 / var(--tw-text-opacity));
 }
 
+.navbar__nav {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
+.navbar__link.active {
+}
+
 .navbar__nav--desktop {
-  display: none;
+  display: flex;
   align-items: center;
 }
 
@@ -557,12 +564,6 @@ section {
   --tw-space-x-reverse: 0;
   margin-right: calc(1.5rem * var(--tw-space-x-reverse));
   margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
-}
-
-@media (min-width: 1024px) {
-  .navbar__nav--desktop {
-    display: flex;
-  }
 }
 
 .navbar__link--desktop {
@@ -627,6 +628,14 @@ section {
   display: flex;
 }
 
+.hidden {
+  display: none;
+}
+
+.h-6 {
+  height: 1.5rem;
+}
+
 .h-\[80vh\] {
   height: 80vh;
 }
@@ -671,8 +680,25 @@ section {
   color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 
-.text-gray-50\/50 {
-  color: rgb(249 250 251 / 0.5);
+.text-gray-50 {
+  --tw-text-opacity: 1;
+  color: rgb(249 250 251 / var(--tw-text-opacity));
+}
+
+/* @layer base {
+  section {
+    outline: 1px solid red;
+  }
+} */
+
+@media (min-width: 640px) {
+  .sm\:block {
+    display: block;
+  }
+
+  .sm\:hidden {
+    display: none;
+  }
 }
 
 @media (min-width: 1024px) {
