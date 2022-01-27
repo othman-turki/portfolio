@@ -3,13 +3,31 @@
 @tailwind utilities;
 
 @layer base {
-  /* section {
-    outline: red 2px solid;
-  } */
+  section {
+    outline: 1px solid red;
+  }
 }
 
 @layer components {
-  .active {
-    @apply before:w-3/4 before:h-[1px] before:bg-red-500 before:absolute before:inset-y-0 before:-left-1 before:my-auto before:-z-[1];
+  .header {
+    @apply fixed top-0 left-0 w-full px-8 lg:px-12 py-4 lg:py-6 bg-white border-b border-gray-100;
+  }
+  .navbar {
+    @apply flex justify-between items-center;
+  }
+  .navbar__brand {
+    @apply font-bold uppercase tracking-wider text-gray-900;
+  }
+  .navbar__nav--desktop {
+    @apply hidden lg:flex items-center space-x-6;
+  }
+  .navbar__link--desktop {
+    @apply text-sm uppercase tracking-wider relative before:absolute before:bottom-0 before:w-full before:h-[1px] before:bg-red-500 before:scale-x-0 before:origin-right before:transition-transform before:duration-300;
+  }
+  .navbar__link--desktop:not(.active) {
+    @apply transition-colors hover:text-gray-900;
+  }
+  .navbar__link--desktop.active {
+    @apply text-gray-900 before:scale-x-100 before:origin-left;
   }
 }

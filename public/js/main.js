@@ -20,13 +20,12 @@ ready(function () {
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          links.forEach((link) => link.classList.remove("active"));
+          [...links].forEach((link) => link.classList.remove("active"));
           document
             .querySelectorAll(`[data-link=${entry.target.id}]`)
             .forEach((activeLink) => {
               activeLink.classList.add("active");
             });
-          // header.classList.toggle("bg-white", entry.target.id !== "home");
         }
       });
     },
@@ -34,7 +33,7 @@ ready(function () {
       threshold: 0.5,
     }
   );
-  sections.forEach((section) => sectionObserver.observe(section));
+  [...sections].forEach((section) => sectionObserver.observe(section));
 
   // HACK TO REMOVE ID HASH SYMBOL FROM URL
   [...links].forEach((link) => {
