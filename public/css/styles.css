@@ -576,8 +576,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .open-menu__btn > :not([hidden]) ~ :not([hidden]), .close-menu__btn > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
-  margin-right: calc(0.5rem * var(--tw-space-x-reverse));
-  margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+  margin-right: calc(0.25rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.25rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .navbar__nav {
@@ -671,8 +671,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: none;
 }
 
+.h-6 {
+  height: 1.5rem;
+}
+
 .h-\[80vh\] {
   height: 80vh;
+}
+
+.w-6 {
+  width: 1.5rem;
 }
 
 .items-center {
@@ -690,6 +698,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
+.align-\[-\.125em\] {
+  vertical-align: -.125em;
 }
 
 .font-body {

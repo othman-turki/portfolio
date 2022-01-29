@@ -29,7 +29,7 @@
   }
   .open-menu__btn,
   .close-menu__btn {
-    @apply h-8 flex items-center space-x-2;
+    @apply h-8 flex items-center space-x-1;
   }
   .navbar__nav {
     /* TO DO */
