@@ -9,6 +9,9 @@
 } */
 
 @layer components {
+  /* ======================================================================
+     ============================ NAVBAR START ============================
+     ====================================================================== */
   .header {
     @apply fixed top-0 left-0 w-full px-8 lg:px-12 py-4 lg:py-6 bg-white border-b border-gray-100;
   }
@@ -18,10 +21,18 @@
   .navbar__brand {
     @apply font-bold uppercase tracking-wider text-gray-900;
   }
+  .collapsed-menu {
+    @apply fixed inset-0 bg-white px-8 flex flex-col;
+  }
+  .close-icon-btn {
+    @apply py-4 self-end;
+  }
   .navbar__nav {
-    @apply fixed inset-0;
+    /* TO DO */
   }
   .navbar__link.active {
+    /* TO DO */
+    @apply text-red-500;
   }
   .navbar__nav--desktop {
     @apply flex items-center space-x-6;
@@ -35,4 +46,7 @@
   .navbar__link--desktop.active {
     @apply text-gray-900 before:scale-x-100 before:origin-left;
   }
+  /* ======================================================================
+     ============================= NAVBAR END =============================
+     ====================================================================== */
 }

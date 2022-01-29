@@ -12,6 +12,9 @@ function ready(fn) {
 ready(function () {
   const links = document.querySelectorAll("[data-link]");
   const sections = document.querySelectorAll("section");
+  const openMenu = document.querySelector("#openMenu");
+  // const closeMenu = document.querySelector("#closeMenu");
+  const collapsedMenu = document.querySelector("#collapsedMenu");
 
   // ======================================================================
   // ============================ NAVBAR START ============================
@@ -42,6 +45,13 @@ ready(function () {
       let linkAttr = link.dataset.link;
       document.getElementById(linkAttr).scrollIntoView(false);
     });
+  });
+
+  openMenu.addEventListener("click", () => {
+    collapsedMenu.classList.remove("hidden");
+  });
+  closeMenu.addEventListener("click", () => {
+    collapsedMenu.classList.add("hidden");
   });
   // ====================================================================
   // ============================ NAVBAR END ============================
