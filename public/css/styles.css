@@ -562,10 +562,22 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-right: 2rem;
 }
 
-.close-icon-btn {
+.close-menu {
   align-self: flex-end;
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+.open-menu__btn, .close-menu__btn {
+  display: flex;
+  height: 2rem;
+  align-items: center;
+}
+
+.open-menu__btn > :not([hidden]) ~ :not([hidden]), .close-menu__btn > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .navbar__nav {
@@ -642,22 +654,6 @@ Ensure the default browser behavior of the `hidden` attribute.
      ============================= NAVBAR END =============================
      ====================================================================== */
 
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
-}
-
-.absolute {
-  position: absolute;
-}
-
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -671,50 +667,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: flex;
 }
 
-.table {
-  display: table;
-}
-
 .hidden {
   display: none;
 }
 
-.h-6 {
-  height: 1.5rem;
-}
-
 .h-\[80vh\] {
   height: 80vh;
-}
-
-.h-1 {
-  height: 0.25rem;
-}
-
-.w-6 {
-  width: 1.5rem;
-}
-
-.shrink {
-  flex-shrink: 1;
-}
-
-.grow {
-  flex-grow: 1;
-}
-
-.rotate-180 {
-  --tw-rotate: 180deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.rotate-90 {
-  --tw-rotate: 90deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.transform {
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .items-center {
@@ -727,14 +685,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .scroll-smooth {
   scroll-behavior: smooth;
-}
-
-.border {
-  border-width: 1px;
-}
-
-.border-none {
-  border-style: none;
 }
 
 .px-8 {
@@ -751,12 +701,13 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 2rem;
 }
 
-.text-\[24vw\] {
-  font-size: 24vw;
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
 }
 
-.italic {
-  font-style: italic;
+.text-\[24vw\] {
+  font-size: 24vw;
 }
 
 .text-gray-700 {
@@ -772,21 +723,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-gray-50 {
   --tw-text-opacity: 1;
   color: rgb(249 250 251 / var(--tw-text-opacity));
-}
-
-.underline {
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
-}
-
-.ring {
-  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
-}
-
-.filter {
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 /* @layer base {

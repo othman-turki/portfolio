@@ -24,8 +24,12 @@
   .collapsed-menu {
     @apply fixed inset-0 bg-white px-8 flex flex-col;
   }
-  .close-icon-btn {
-    @apply py-4 self-end;
+  .close-menu {
+    @apply self-end py-4;
+  }
+  .open-menu__btn,
+  .close-menu__btn {
+    @apply h-8 flex items-center space-x-2;
   }
   .navbar__nav {
     /* TO DO */
